@@ -1,0 +1,58 @@
+
+################################
+#Project Euler
+
+#Problem Statement 3
+
+
+################################
+import time
+import math
+def divisible(number):
+	listDiv=[]
+		
+	for i in range(1,sqrtNum(number)+1):		
+		if (number % i == 0 ):
+			listDiv.append(i)
+	return listDiv
+
+def divTwo(number):
+	result= not (number % 2)
+	return result
+
+def divFive(number):
+	result= not (number % 5)
+	return result
+	
+def checkPrime(divList):
+	remList=[]	
+	for i in divList:
+		if i==2 or i==5 or i==0 or i==1:
+			#do nothing
+			print('daa')
+		elif divTwo(i):			
+			remList.append(i)
+		elif divFive(i):	
+			remList.append(i)		
+			
+	return remList	
+	
+
+def sqrtNum(number):
+	result=int(math.sqrt(int(number)))
+	return result
+
+def maxPrime():
+	number=int(input('Insert the number'))	
+	listDiv=divisible(number)
+	data=checkPrime(listDiv)
+	
+	print(data)				
+	return number
+
+#time for execution of script
+start_time = time.time()
+maxPrime()
+print("--- %s seconds ---" % (time.time() - start_time))
+
+
