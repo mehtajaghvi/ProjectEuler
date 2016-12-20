@@ -9,6 +9,7 @@
 ################################
 import time
 import math
+
 listL=[19,17,18,16,15,14,13,11]
 #listL=[10,9,8,7]
 maxNumber=20
@@ -28,7 +29,7 @@ def five_smallestNumber():
 			else:			    			    
 			    break
 
-		if flag=='doneSearching':		
+		if flag=='doneSearching':			
 			break		
 	print ("The number is", theNumber)			
 	return theNumber

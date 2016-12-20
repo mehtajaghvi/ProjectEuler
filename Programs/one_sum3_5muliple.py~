@@ -14,7 +14,7 @@ multiple2=5
 
 def one_divN():
 	sumN=0	
-	inputN=input('Input the natural number')
+	inputN=input('Input the narutal number')
 	for i in range(1,int(inputN)):
 		if not (i % multiple1) or not(i % multiple2):
 			sumN=sumN+i
