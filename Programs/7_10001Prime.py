@@ -35,13 +35,15 @@ def thousandPrime():
 	#Choose a huge number	
 	flag="true"
 	#start from a huge number
-	N=104700 
+	N=104700
 	while(flag=="true"):
 		data=range(1,N)				
 		prime=list(map(checkPrime,list(data)))
 		new = [x for x in prime if x != 0]
+		#print(new)
 		thouLen=(len(new))
 		print(thouLen)
+		#1 is added as prime, hence using 10002 instead of 10001
 		if thouLen==10002:	
 			print("here is the answer", max(new))
 			#print(new)
