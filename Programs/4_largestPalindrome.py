@@ -16,7 +16,7 @@ import math
 
 def palinDrome(listPal):
 	palCheck=[]
-	
+	#check if the reverse is same 
 	for i in listPal:
 		i=str(i)
 		if i==i[::-1]:
