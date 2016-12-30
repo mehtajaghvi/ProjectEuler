@@ -3,10 +3,8 @@
 ################################
 #Project Euler
 
-#Problem Statement 7
-#10001st prime
-#By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
-#What is the 10001st prime number?
+#Problem Statement 10
+
 ################################
 import time
 import math
@@ -24,36 +22,34 @@ def divisible(number):
 
 def checkPrime(n):	
 	#length of the integers in the list will indicate if the number is prime 
-	length=len(divisible(n))
-	if (length==1):
-		y=n
-	else:
+	if (n!=3 and n!=5 and (n%3==0 or n%5==0)):
 		y=0
+	else:
+		length=len(divisible(n))
+		if (length==1):
+			y=n
+		else:
+			y=0
 	return y	
 	
-def thousandPrime():
+def sumPrime():
 	#Choose a huge number	
 	flag="true"
 	#start from a huge number
-	N=104700
-	while(flag=="true"):
-		data=range(1,N)				
-		prime=list(map(checkPrime,list(data)))
-		new = [x for x in prime if x != 0]
-		#print(new)
-		thouLen=(len(new))
-		print(thouLen)
-		#1 is added as prime, hence using 10002 instead of 10001
-		if thouLen==10002:	
-			print("here is the answer", max(new))
-			#print(new)
-			flag="false"
-			break
-		N=N+3 #increase N if the condition is not met
+	N=2000000
+	#only odd numbers can be prime
+	data=range(1,N,2)
+	#print(list(data))				
+	prime=list(map(checkPrime,list(data)))
+	#print(prime)
+	sumPrime=sum(prime)
+	result=sumPrime-1+2 #in the list of prime, 1 is also considered a prime, as it deletes 2 due to optimization
+	return result
 		
 #time for execution of script
 start_time = time.time()
-thousandPrime()
+result=sumPrime()
+print(result)
 print("--- %s seconds ---" % (time.time() - start_time))
 
 
