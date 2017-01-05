@@ -50,7 +50,7 @@ def collatz():
 			lastlength=newlength
 			#numbe with the longest iterative series
 			foundnumber=number
-			print("--- %d %d--" , number, newlength) 
+			print("--- %d %d-%d--" , number, newlength) 
 			#print (collatz)		
 		
 	return foundnumber
