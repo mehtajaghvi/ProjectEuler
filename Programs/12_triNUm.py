@@ -43,7 +43,7 @@ def divisible_unoptimized(n):
 start_time = time.time()
 numberMin=12000
 
-#magic number, found using intution
+#magic number, found using intution/iteration
 numberMax=12375
 number=numberMax
 
@@ -59,6 +59,5 @@ if optimized==1:
 else:
 	result=(divisible_unoptimized(numberMax))
 	print(result)
-	
-	
+		
 print("--- %s seconds ---" % (time.time() - start_time))

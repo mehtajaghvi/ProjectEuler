@@ -21,6 +21,7 @@ def divisible(number):
 def sqrtNum(number):
 	result=int(math.sqrt(int(number)))
 	return result
+
 def checkPrime(divList):
 	primeIdx=0
 	l=[]
