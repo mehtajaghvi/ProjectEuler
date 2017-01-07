@@ -3,7 +3,7 @@
 #Project Euler
 
 #Problem Statement 14
-#Collatz
+#Collatz Sequence
 
 ################################
 import time
