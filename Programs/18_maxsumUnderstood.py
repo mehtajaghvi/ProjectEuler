@@ -18,21 +18,8 @@ def triangle():
 	idx=0
 	for i in range(0,len(mainL)-1):
 		#main list
-		#print("list",l1[i])	
-		#short list with the adjacent numbers	
-		l=mainL[i+1][idx:idx+2]		
-		print("shortlist",l)		
-		#max in the shortlist
-		idxmaxshort=(l.index(max(l)))
-		print(max(l))		
-		summ=(max(l))
-		maxsum=summ+maxsum
-		#find the index of the max number in the short list in the original list of which shortlist is subset		
-		idxMax=[i for i,x in enumerate(mainL[i+1]) if x == l[idxmaxshort]]
-		#set that as the index for next short list	
-		number=[i for i,x in enumerate(idxMax) if x==idx or x==idx+1]
-		idx=idxMax[number[0]]	
-		print(idx)
+		print("list",l1[i])	
+
 	return maxsum
 #time for execution of script
 start_time = time.time()
